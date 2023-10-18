@@ -24,3 +24,15 @@ int CompararString(char string1[], char string2[]){
         return 0;
     }
 }
+
+int BuscaMenor(int array[]){
+    int menor = array[0];
+    int tamanhoArray = sizeof(array)/sizeof(array[0]);
+    for (int i = 0; i < tamanhoArray; i++){
+        if(array[i] < menor){
+            menor = array[i];
+        }
+        
+    }
+    return menor;
+}

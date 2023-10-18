@@ -6,7 +6,7 @@
 
 int main(){
 
-    char nome[20], sexo[1];
+    char nome[20], sexo[2];
     int idade;
 
     char ParametroSexo[] = "F";
@@ -14,15 +14,18 @@ int main(){
     printf("DIgite seu nome : ");
     fgets(nome,20,stdin);
     printf("Digite o sexo (M ou F) : ");
-    fgets(sexo, 1, stdin);
+    fgets(sexo, 2, stdin);
     printf("Digite sua idade : ");
     scanf("%d", &idade);
 
     int Analise1 = strcmp(sexo, ParametroSexo);
-    if (Analise1 == 1){
-        if (Idade <= ParametroIdade){
-            printf("ACEITA\n")
+    //retorna  0 -> iguais
+    if (Analise1 == 0){
+        if (idade <= ParametroIdade){
+            printf("ACEITA\n");
         }
+    } else {
+        printf("NAO ACEITA\n");
     }
 
 
